@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const bodyParser = require('body-parser');
 const todoRouter = require('./server/routes/todo');
 
 const port = process.env.port || 4000;
 
 app.use(bodyParser());
+
 
 app.use(function(req, res, next) {
 
@@ -15,6 +17,6 @@ app.use(function(req, res, next) {
   
 });
 
-app.use('/', todoRouter);
+app.use('/todo', todoRouter);
 
 app.listen(port);
