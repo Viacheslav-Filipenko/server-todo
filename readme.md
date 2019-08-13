@@ -36,18 +36,20 @@ json
 {
     "data": [
         {
-            "id": 1,
+           "id": 1,
             "description": "todo",
             "completed": false,
-            "createdAt": "2019-08-13T10:34:58.089Z",
-            "updatedAt": "2019-08-13T10:34:58.089Z"
+            "toDate": null
+            "updatedAt": "2019-08-13T11:53:05.551Z",
+            "createdAt": "2019-08-13T11:53:05.551Z"
         },
         {
             "id": 2,
-            "description": "new todo",
+            "description": "todo",
             "completed": false,
-            "createdAt": "2019-08-13T10:35:54.470Z",
-            "updatedAt": "2019-08-13T10:35:54.470Z"
+            "toDate": null
+            "updatedAt": "2019-08-13T11:53:05.551Z",
+            "createdAt": "2019-08-13T11:53:05.551Z"
         }
     ]
 }
@@ -89,8 +91,9 @@ json
         "id": 1,
         "description": "todo",
         "completed": false,
-        "createdAt": "2019-08-13T10:34:58.089Z",
-        "updatedAt": "2019-08-13T10:34:58.089Z"
+        "toDate": null
+        "updatedAt": "2019-08-13T11:53:05.551Z",
+        "createdAt": "2019-08-13T11:53:05.551Z"
     }
 }
 
@@ -116,6 +119,11 @@ POST
 | ----------- | -------- | ----------------------- |
 | description | [string] | the description of todo |
 
+#### Optional Parameters
+| Field       | Type     | Description             |
+| ----------- | -------- | ----------------------- |
+| toDate | [date] | the deadline for todo |
+
 #### Sample Request
 
 ```
@@ -138,8 +146,9 @@ json
         "id": 1,
         "description": "todo",
         "completed": false,
-        "createdAt": "2019-08-13T10:34:58.089Z",
-        "updatedAt": "2019-08-13T10:34:58.089Z"
+        "toDate": null,
+        "updatedAt": "2019-08-13T11:53:05.551Z",
+        "createdAt": "2019-08-13T11:53:05.551Z"
     }
 }
 
@@ -166,6 +175,11 @@ PUT
 | description | [string] | the description of todo |
 | completed | [bool] | state of todo |
 
+#### Optional Parameters
+| Field       | Type     | Description             |
+| ----------- | -------- | ----------------------- |
+| toDate | [date] | the deadline for todo |
+
 #### Sample Request
 
 ```
@@ -188,9 +202,10 @@ json
     "data": {
         "id": 2,
         "description": "todo",
-        "completed": true,
-        "createdAt": "2019-08-13T11:26:22.302Z",
-        "updatedAt": "2019-08-13T11:29:32.274Z"
+        "completed": false,
+        "toDate": null,
+        "updatedAt": "2019-08-13T11:53:05.551Z",
+        "createdAt": "2019-08-13T11:53:05.551Z"
     }
 }
 
