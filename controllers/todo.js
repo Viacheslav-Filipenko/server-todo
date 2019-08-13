@@ -30,10 +30,10 @@ exports.create = async (req, res) => {
     try {
         const { description } = req.body;
 
-        const { id } = await todoRepository.create(description);
+        const todo = await todoRepository.create(description);
 
-        res.json({
-            data: id,
+        res.status(201).json({
+            data: todo,
         });
     } catch (error) {
         res.status(500).json({ message: error.message });
@@ -46,10 +46,10 @@ exports.update = async (req, res) => {
 
         const { description, completed } = req.body;
 
-        await todoRepository.update(id, { description, completed });
+        const todo = await todoRepository.update(id, { description, completed });
 
         res.json({
-            data: id,
+            data: todo,
         });
     } catch (error) {
         res.status(500).json({ message: error.message });
@@ -62,9 +62,7 @@ exports.delete = async (req, res) => {
 
         await todoRepository.delete(id);
 
-        res.json({
-            data: id,
-        });
+        res.end();
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
