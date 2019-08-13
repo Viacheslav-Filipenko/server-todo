@@ -8,8 +8,9 @@ exports.getById = async id => {
     return await db.Todo.findOne({ where: { id } });
 };
 
-exports.create = async description => {
-    return await db.Todo.create({ description, completed: false });
+exports.create = async (description, date) => {
+    const toDate = date || null;
+    return await db.Todo.create({ description, completed: false, toDate });
 };
 
 exports.update = async (id, data) => {
