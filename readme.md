@@ -189,7 +189,7 @@ https://todo-training.herokuapp.com/todos/1
 ```
 json
 {
-	"description": "todo",
+    "description": "todo",
     "completed": true
 }
 ```
@@ -202,7 +202,7 @@ json
     "data": {
         "id": 2,
         "description": "todo",
-        "completed": false,
+        "completed": true,
         "toDate": null,
         "updatedAt": "2019-08-13T11:53:05.551Z",
         "createdAt": "2019-08-13T11:53:05.551Z"
