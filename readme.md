@@ -122,6 +122,13 @@ POST
 https://todo-training.herokuapp.com/todos
 ```
 
+```
+json
+{
+	"description": "todo"
+}
+```
+
 #### Sample Response
 
 ```
@@ -165,17 +172,25 @@ PUT
 https://todo-training.herokuapp.com/todos/1
 ```
 
+```
+json
+{
+	"description": "todo",
+    "completed": true
+}
+```
+
 #### Sample Response
 
 ```
 json
 {
     "data": {
-        "id": 1,
+        "id": 2,
         "description": "todo",
-        "completed": false,
-        "createdAt": "2019-08-13T10:34:58.089Z",
-        "updatedAt": "2019-08-13T10:34:58.089Z"
+        "completed": true,
+        "createdAt": "2019-08-13T11:26:22.302Z",
+        "updatedAt": "2019-08-13T11:29:32.274Z"
     }
 }
 
