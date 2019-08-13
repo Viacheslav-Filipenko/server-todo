@@ -67,7 +67,7 @@ GET
 
 | Field | Type  | Description                         |
 | ----- | ----- | ----------------------------------- |
-| id    | [int] | The id of element which is returned |
+| id    | [int] | The id of todo to get |
 
 ### Sample Request
 
@@ -98,7 +98,7 @@ Add todo to the todo list.
 ### URI
 
 ```
-https://todo-training.herokuapp.com/todos/{id}
+https://todo-training.herokuapp.com/todos
 ```
 ### HTTP Method
 
@@ -142,7 +142,7 @@ PUT
 
 | Field | Type  | Description                         |
 | ----- | ----- | ----------------------------------- |
-| id    | [int] | The id of element which is returned |
+| id    | [int] | The id of todo to update |
 
 ### Sample Request
 
@@ -176,7 +176,7 @@ DELETE
 
 | Field | Type  | Description                         |
 | ----- | ----- | ----------------------------------- |
-| id    | [int] | The id of element which is returned |
+| id    | [int] | The id of todo to delete |
 
 ### Sample Request
 
