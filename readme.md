@@ -1,30 +1,35 @@
 # Todo server
 
+* [Get todos](https://github.com/Viacheslav-Filipenko/server-todo#get-todos)
+* [Get todo](https://github.com/Viacheslav-Filipenko/server-todo#get-todo)
+* [Update todo](https://github.com/Viacheslav-Filipenko/server-todo#update-todo)
+* [Delete todo](https://github.com/Viacheslav-Filipenko/server-todo#delete-todo)
+
 ## Get todos
 
 Retrieve all todos.
 
-### URI
+#### URI
 
 ```
 https://todo-training.herokuapp.com/todos
 ```
 
-### HTTP Method
+#### HTTP Method
 
 GET
 
-### Required Parameters
+#### Required Parameters
 
 (none)
 
-### Sample Request
+#### Sample Request
 
 ```
 https://todo-training.herokuapp.com/todos
 ```
 
-### Sample Response
+#### Sample Response
 
 ```
 json
@@ -53,29 +58,29 @@ json
 
 Retrieve one todo.
 
-### URI
+#### URI
 
 ```
 https://todo-training.herokuapp.com/todos/{id}
 ```
 
-### HTTP Method
+#### HTTP Method
 
 GET
 
-### Required Parameters
+#### Required Parameters
 
 | Field | Type  | Description                         |
 | ----- | ----- | ----------------------------------- |
 | id    | [int] | The id of todo to get |
 
-### Sample Request
+#### Sample Request
 
 ```
 https://todo-training.herokuapp.com/todos/1
 ```
 
-### Sample Response
+#### Sample Response
 
 ```
 json
@@ -95,28 +100,28 @@ json
 
 Add todo to the todo list.
 
-### URI
+#### URI
 
 ```
 https://todo-training.herokuapp.com/todos
 ```
-### HTTP Method
+#### HTTP Method
 
 POST
 
-### Required Parameters
+#### Required Parameters
 
 | Field | Type  | Description                         |
 | ----- | ----- | ----------------------------------- |
 | description    | [string] | the description of todo |
 
-### Sample Request
+#### Sample Request
 
 ```
 https://todo-training.herokuapp.com/todos
 ```
 
-### Sample Response
+#### Sample Response
 
 ```
 json
@@ -128,29 +133,29 @@ json
 
 ## Update todo
 
-### URI
+#### URI
 
 ```
 https://todo-training.herokuapp.com/todos/{id}
 ```
 
-### HTTP Method
+#### HTTP Method
 
 PUT
 
-### Required Parameters
+#### Required Parameters
 
 | Field | Type  | Description                         |
 | ----- | ----- | ----------------------------------- |
 | id    | [int] | The id of todo to update |
 
-### Sample Request
+#### Sample Request
 
 ```
 https://todo-training.herokuapp.com/todos/1
 ```
 
-### Sample Response
+#### Sample Response
 
 ```
 json
@@ -162,29 +167,29 @@ json
 
 ## Delete todo
 
-### URI
+#### URI
 
 ```
 https://todo-training.herokuapp.com/todos/{id}
 ```
 
-### HTTP Method
+#### HTTP Method
 
 DELETE
 
-### Required Parameters
+#### Required Parameters
 
 | Field | Type  | Description                         |
 | ----- | ----- | ----------------------------------- |
 | id    | [int] | The id of todo to delete |
 
-### Sample Request
+#### Sample Request
 
 ```
 https://todo-training.herokuapp.com/todos/1
 ```
 
-### Sample Response
+#### Sample Response
 
 ```
 json
