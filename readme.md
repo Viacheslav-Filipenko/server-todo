@@ -156,6 +156,8 @@ PUT
 | Field | Type  | Description              |
 | ----- | ----- | ------------------------ |
 | id    | [int] | The id of todo to update |
+| description | [string] | the description of todo |
+| completed | [bool] | state of todo |
 
 #### Sample Request
 
