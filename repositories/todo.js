@@ -9,8 +9,8 @@ exports.getById = async id => {
 };
 
 exports.create = async (description, date) => {
-    const toDate = date || null;
-    return await db.Todo.create({ description, completed: false, toDate });
+    const dueDate = date || null;
+    return await db.Todo.create({ description, completed: false, dueDate });
 };
 
 exports.update = async (id, data) => {

@@ -39,7 +39,7 @@ json
            "id": 1,
             "description": "todo",
             "completed": false,
-            "toDate": null
+            "dueDate": null
             "updatedAt": "2019-08-13T11:53:05.551Z",
             "createdAt": "2019-08-13T11:53:05.551Z"
         },
@@ -47,7 +47,7 @@ json
             "id": 2,
             "description": "todo",
             "completed": false,
-            "toDate": null
+            "dueDate": null
             "updatedAt": "2019-08-13T11:53:05.551Z",
             "createdAt": "2019-08-13T11:53:05.551Z"
         }
@@ -91,7 +91,7 @@ json
         "id": 1,
         "description": "todo",
         "completed": false,
-        "toDate": null
+        "dueDate": null
         "updatedAt": "2019-08-13T11:53:05.551Z",
         "createdAt": "2019-08-13T11:53:05.551Z"
     }
@@ -122,7 +122,7 @@ POST
 #### Optional Parameters
 | Field       | Type     | Description             |
 | ----------- | -------- | ----------------------- |
-| toDate | [date] | the deadline for todo |
+| dueDate | [date] | the deadline for todo |
 
 #### Sample Request
 
@@ -146,7 +146,7 @@ json
         "id": 1,
         "description": "todo",
         "completed": false,
-        "toDate": null,
+        "dueDate": null,
         "updatedAt": "2019-08-13T11:53:05.551Z",
         "createdAt": "2019-08-13T11:53:05.551Z"
     }
@@ -178,7 +178,7 @@ PUT
 #### Optional Parameters
 | Field       | Type     | Description             |
 | ----------- | -------- | ----------------------- |
-| toDate | [date] | the deadline for todo |
+| dueDate | [date] | the deadline for todo |
 
 #### Sample Request
 
@@ -203,7 +203,7 @@ json
         "id": 2,
         "description": "todo",
         "completed": true,
-        "toDate": null,
+        "dueDate": null,
         "updatedAt": "2019-08-13T11:53:05.551Z",
         "createdAt": "2019-08-13T11:53:05.551Z"
     }
