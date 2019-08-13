@@ -1,9 +1,9 @@
 # Todo server
 
-* [Get todos](https://github.com/Viacheslav-Filipenko/server-todo#get-todos)
-* [Get todo](https://github.com/Viacheslav-Filipenko/server-todo#get-todo)
-* [Update todo](https://github.com/Viacheslav-Filipenko/server-todo#update-todo)
-* [Delete todo](https://github.com/Viacheslav-Filipenko/server-todo#delete-todo)
+- [Get todos](https://github.com/Viacheslav-Filipenko/server-todo#get-todos)
+- [Get todo](https://github.com/Viacheslav-Filipenko/server-todo#get-todo)
+- [Update todo](https://github.com/Viacheslav-Filipenko/server-todo#update-todo)
+- [Delete todo](https://github.com/Viacheslav-Filipenko/server-todo#delete-todo)
 
 ## Get todos
 
@@ -70,8 +70,8 @@ GET
 
 #### Required Parameters
 
-| Field | Type  | Description                         |
-| ----- | ----- | ----------------------------------- |
+| Field | Type  | Description           |
+| ----- | ----- | --------------------- |
 | id    | [int] | The id of todo to get |
 
 #### Sample Request
@@ -105,15 +105,16 @@ Add todo to the todo list.
 ```
 https://todo-training.herokuapp.com/todos
 ```
+
 #### HTTP Method
 
 POST
 
 #### Required Parameters
 
-| Field | Type  | Description                         |
-| ----- | ----- | ----------------------------------- |
-| description    | [string] | the description of todo |
+| Field       | Type     | Description             |
+| ----------- | -------- | ----------------------- |
+| description | [string] | the description of todo |
 
 #### Sample Request
 
@@ -126,8 +127,15 @@ https://todo-training.herokuapp.com/todos
 ```
 json
 {
-    "data": 1
+    "data": {
+        "id": 1,
+        "description": "todo",
+        "completed": false,
+        "createdAt": "2019-08-13T10:34:58.089Z",
+        "updatedAt": "2019-08-13T10:34:58.089Z"
+    }
 }
+
 
 ```
 
@@ -145,8 +153,8 @@ PUT
 
 #### Required Parameters
 
-| Field | Type  | Description                         |
-| ----- | ----- | ----------------------------------- |
+| Field | Type  | Description              |
+| ----- | ----- | ------------------------ |
 | id    | [int] | The id of todo to update |
 
 #### Sample Request
@@ -160,8 +168,15 @@ https://todo-training.herokuapp.com/todos/1
 ```
 json
 {
-    "data": 1
+    "data": {
+        "id": 1,
+        "description": "todo",
+        "completed": false,
+        "createdAt": "2019-08-13T10:34:58.089Z",
+        "updatedAt": "2019-08-13T10:34:58.089Z"
+    }
 }
+
 
 ```
 
@@ -179,8 +194,8 @@ DELETE
 
 #### Required Parameters
 
-| Field | Type  | Description                         |
-| ----- | ----- | ----------------------------------- |
+| Field | Type  | Description              |
+| ----- | ----- | ------------------------ |
 | id    | [int] | The id of todo to delete |
 
 #### Sample Request
@@ -194,7 +209,6 @@ https://todo-training.herokuapp.com/todos/1
 ```
 json
 {
-    "data": 1
 }
 
 ```
