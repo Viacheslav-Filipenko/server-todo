@@ -28,9 +28,13 @@ exports.getById = async (req, res) => {
 
 exports.create = async (req, res) => {
     try {
-        const { description, dueDate } = req.body;
+        const { description, dueDate, endDate } = req.body;
 
-        const todo = await todoRepository.create(description, dueDate);
+        const todo = await todoRepository.create({
+            description,
+            dueDate: dueDate || null,
+            endDate: endDate || null,
+        });
 
         res.status(201).json({
             data: todo,
@@ -44,10 +48,11 @@ exports.update = async (req, res) => {
     try {
         const id = +req.params.id;
 
-        const { description, completed, dueDate } = req.body;
+        const { description, completed, dueDate, endDate } = req.body;
         const todo = await todoRepository.update(id, {
             description,
             completed,
+            endDate: endDate || null,
             dueDate: dueDate || null,
         });
 
