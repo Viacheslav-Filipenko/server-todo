@@ -122,7 +122,8 @@ POST
 #### Optional Parameters
 | Field       | Type     | Description             |
 | ----------- | -------- | ----------------------- |
-| dueDate | [date] | the deadline for todo |
+| dueDate | [date] | the due date for todo |
+| endDate | [date] | the end date for todo |
 
 #### Sample Request
 
@@ -178,7 +179,8 @@ PUT
 #### Optional Parameters
 | Field       | Type     | Description             |
 | ----------- | -------- | ----------------------- |
-| dueDate | [date] | the deadline for todo |
+| dueDate | [date] | the due date for todo |
+| endDate | [date] | the end date for todo |
 
 #### Sample Request
 
