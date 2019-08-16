@@ -2,7 +2,8 @@ const todoRepository = require('../repositories/todo');
 
 exports.getAll = async (req, res) => {
     try {
-        const todos = await todoRepository.getAll();
+        const userId = req.user.id || null;
+        const todos = await todoRepository.getAll(userId);
 
         res.json({
             data: todos,
@@ -15,8 +16,9 @@ exports.getAll = async (req, res) => {
 exports.getById = async (req, res) => {
     try {
         const id = +req.params.id;
+        const userId = req.user.id || null;
 
-        const todo = await todoRepository.getById(id);
+        const todo = await todoRepository.getById(id, userId);
 
         res.json({
             data: todo,
@@ -29,9 +31,11 @@ exports.getById = async (req, res) => {
 exports.create = async (req, res) => {
     try {
         const { description, dueDate, endDate } = req.body;
-
+        const userId = req.user.id || null;
+        console.log('asdas')
         const todo = await todoRepository.create({
             description,
+            user_id: userId,
             dueDate: dueDate || null,
             endDate: endDate || null,
         });
@@ -47,9 +51,10 @@ exports.create = async (req, res) => {
 exports.update = async (req, res) => {
     try {
         const id = +req.params.id;
+        const userId = req.user.id || null;
 
         const { description, completed, dueDate, endDate } = req.body;
-        const todo = await todoRepository.update(id, {
+        const todo = await todoRepository.update(id, userId, {
             description,
             completed,
             endDate: endDate || null,
@@ -67,8 +72,9 @@ exports.update = async (req, res) => {
 exports.delete = async (req, res) => {
     try {
         const id = +req.params.id;
+        const userId = req.user.id || null;
 
-        await todoRepository.delete(id);
+        await todoRepository.delete(id, userId);
 
         res.end();
     } catch (error) {
