@@ -304,7 +304,7 @@ json
 #### URI
 
 ```
-https://auth-todo-training.herokuapp.com/api/todos/{id}/complete
+https://auth-todo-training.herokuapp.com/api/todos/{id}/uncomplete
 ```
 
 #### Required Parameters
@@ -321,7 +321,7 @@ PUT
 #### Sample Request
 
 ```
-https://auth-todo-training.herokuapp.com/api/todos/55/complete
+https://auth-todo-training.herokuapp.com/api/todos/55/uncomplete
 ```
 
 #### Sample Response
