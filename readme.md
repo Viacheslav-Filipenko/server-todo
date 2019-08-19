@@ -1,15 +1,15 @@
 # Todo server
 
--[Auth](https://github.com/Viacheslav-Filipenko/server-todo#auth)
-  - [Login](https://github.com/Viacheslav-Filipenko/server-todo#login)
-  - [Register](https://github.com/Viacheslav-Filipenko/server-todo#register)
--[Api](https://github.com/Viacheslav-Filipenko/server-todo#api)
-  - [Get todos](https://github.com/Viacheslav-Filipenko/server-todo#get-todos)
-  - [Get todo](https://github.com/Viacheslav-Filipenko/server-todo#get-todo)
-  - [Complete todo](https://github.com/Viacheslav-Filipenko/server-todo#complete-todo)
-  - [Uncomplete todo](https://github.com/Viacheslav-Filipenko/server-todo#uncomplete-todo)
-  - [Update todo](https://github.com/Viacheslav-Filipenko/server-todo#update-todo)
-  - [Delete todo](https://github.com/Viacheslav-Filipenko/server-todo#delete-todo)
+- [Auth](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#auth)
+ - [Login](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#login)
+ - [Register](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#register)
+- [Api](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#api)
+ - [Get todos](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#get-todos)
+ - [Get todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#get-todo)
+ - [Complete todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#complete-todo)
+ - [Uncomplete todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#uncomplete-todo)
+ - [Update todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#update-todo)
+ - [Delete todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#delete-todo)
 
 #Auth
 
