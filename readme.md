@@ -126,22 +126,26 @@ https://auth-todo-training.herokuapp.com/api/todos
 json
 {
     "data": [
-        {
-           "id": 1,
-            "description": "todo",
+         {
+            "id": 49,
+            "description": "1603vv01",
             "completed": false,
-            "dueDate": null
-            "updatedAt": "2019-08-13T11:53:05.551Z",
-            "createdAt": "2019-08-13T11:53:05.551Z"
+            "user_id": 2,
+            "dueDate": null,
+            "endDate": null,
+            "createdAt": "2019-08-16T14:36:39.843Z",
+            "updatedAt": "2019-08-16T14:36:39.843Z"
         },
         {
-            "id": 2,
-            "description": "todo",
+            "id": 51,
+            "description": "security",
             "completed": false,
-            "dueDate": null
-            "updatedAt": "2019-08-13T11:53:05.551Z",
-            "createdAt": "2019-08-13T11:53:05.551Z"
-        }
+            "user_id": 2,
+            "dueDate": null,
+            "endDate": null,
+            "createdAt": "2019-08-19T00:15:56.203Z",
+            "updatedAt": "2019-08-19T00:21:39.594Z"
+        },
     ]
 }
 
@@ -170,7 +174,7 @@ GET
 #### Sample Request
 
 ```
-https://auth-todo-training.herokuapp.com/api/todos/1
+https://auth-todo-training.herokuapp.com/api/todos/55
 ```
 
 #### Sample Response
@@ -179,12 +183,14 @@ https://auth-todo-training.herokuapp.com/api/todos/1
 json
 {
     "data": {
-        "id": 1,
-        "description": "todo",
+        "id": 55,
+        "description": "test 2",
         "completed": false,
-        "dueDate": null
-        "updatedAt": "2019-08-13T11:53:05.551Z",
-        "createdAt": "2019-08-13T11:53:05.551Z"
+        "user_id": 2,
+        "dueDate": null,
+        "endDate": null,
+        "createdAt": "2019-08-19T08:17:22.202Z",
+        "updatedAt": "2019-08-19T08:17:22.202Z"
     }
 }
 
@@ -234,12 +240,14 @@ json
 json
 {
     "data": {
-        "id": 1,
-        "description": "todo",
+        "id": 54,
         "completed": false,
+        "description": "test",
+        "user_id": 2,
         "dueDate": null,
-        "updatedAt": "2019-08-13T11:53:05.551Z",
-        "createdAt": "2019-08-13T11:53:05.551Z"
+        "updatedAt": "2019-08-19T08:17:04.852Z",
+        "createdAt": "2019-08-19T08:17:04.852Z",
+        "endDate": null
     }
 }
 
@@ -267,7 +275,7 @@ PUT
 #### Sample Request
 
 ```
-https://auth-todo-training.herokuapp.com/api/todos/{id}/complete
+https://auth-todo-training.herokuapp.com/api/todos/55/complete
 ```
 
 
@@ -277,12 +285,14 @@ https://auth-todo-training.herokuapp.com/api/todos/{id}/complete
 json
 {
     "data": {
-        "id": 2,
-        "description": "todo",
+        "id": 55,
+        "description": "test 2",
         "completed": true,
+        "user_id": 2,
         "dueDate": null,
-        "updatedAt": "2019-08-13T11:53:05.551Z",
-        "createdAt": "2019-08-13T11:53:05.551Z"
+        "endDate": "2019-08-19T08:20:25.057Z",
+        "createdAt": "2019-08-19T08:17:22.202Z",
+        "updatedAt": "2019-08-19T08:20:25.136Z"
     }
 }
 
@@ -311,7 +321,7 @@ PUT
 #### Sample Request
 
 ```
-https://auth-todo-training.herokuapp.com/api/todos/{id}/complete
+https://auth-todo-training.herokuapp.com/api/todos/55/complete
 ```
 
 #### Sample Response
@@ -320,12 +330,14 @@ https://auth-todo-training.herokuapp.com/api/todos/{id}/complete
 json
 {
     "data": {
-        "id": 2,
-        "description": "todo",
-        "completed": true,
+        "id": 55,
+        "description": "test 2",
+        "completed": false,
+        "user_id": 2,
         "dueDate": null,
-        "updatedAt": "2019-08-13T11:53:05.551Z",
-        "createdAt": "2019-08-13T11:53:05.551Z"
+        "endDate": null,
+        "createdAt": "2019-08-19T08:17:22.202Z",
+        "updatedAt": "2019-08-19T08:20:48.115Z"
     }
 }
 
@@ -339,12 +351,6 @@ json
 ```
 https://auth-todo-training.herokuapp.com/api/todos/{id}
 ```
-
-```
-https://auth-todo-training.herokuapp.com/api/todos/1/complete
-```
-
-
 
 #### HTTP Method
 
@@ -365,7 +371,7 @@ PUT
 #### Sample Request
 
 ```
-https://auth-todo-training.herokuapp.com/api/todos/1
+https://auth-todo-training.herokuapp.com/api/todos/55
 ```
 
 ```
@@ -382,12 +388,14 @@ json
 json
 {
     "data": {
-        "id": 2,
-        "description": "todo",
-        "completed": true,
+        "id": 55,
+        "description": "update test",
+        "completed": false,
+        "user_id": 2,
         "dueDate": null,
-        "updatedAt": "2019-08-13T11:53:05.551Z",
-        "createdAt": "2019-08-13T11:53:05.551Z"
+        "endDate": null,
+        "createdAt": "2019-08-19T08:17:22.202Z",
+        "updatedAt": "2019-08-19T08:21:22.539Z"
     }
 }
 
@@ -415,7 +423,7 @@ DELETE
 #### Sample Request
 
 ```
-https://auth-todo-training.herokuapp.com/api/todos/1
+https://auth-todo-training.herokuapp.com/api/todos/55
 ```
 
 #### Sample Response
