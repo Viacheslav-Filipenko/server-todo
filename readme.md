@@ -1,9 +1,100 @@
 # Todo server
 
-- [Get todos](https://github.com/Viacheslav-Filipenko/server-todo#get-todos)
-- [Get todo](https://github.com/Viacheslav-Filipenko/server-todo#get-todo)
-- [Update todo](https://github.com/Viacheslav-Filipenko/server-todo#update-todo)
-- [Delete todo](https://github.com/Viacheslav-Filipenko/server-todo#delete-todo)
+-[Auth](https://github.com/Viacheslav-Filipenko/server-todo#auth)
+  - [Login](https://github.com/Viacheslav-Filipenko/server-todo#login)
+  - [Register](https://github.com/Viacheslav-Filipenko/server-todo#register)
+-[Api](https://github.com/Viacheslav-Filipenko/server-todo#api)
+  - [Get todos](https://github.com/Viacheslav-Filipenko/server-todo#get-todos)
+  - [Get todo](https://github.com/Viacheslav-Filipenko/server-todo#get-todo)
+  - [Complete todo](https://github.com/Viacheslav-Filipenko/server-todo#complete-todo)
+  - [Uncomplete todo](https://github.com/Viacheslav-Filipenko/server-todo#uncomplete-todo)
+  - [Update todo](https://github.com/Viacheslav-Filipenko/server-todo#update-todo)
+  - [Delete todo](https://github.com/Viacheslav-Filipenko/server-todo#delete-todo)
+
+#Auth
+
+## Login 
+
+#### URI
+
+```
+https://auth-todo-training.herokuapp.com/auth/login
+```
+
+#### Required Parameters
+
+| Field | Type  | Description           |
+| ----- | ----- | --------------------- |
+| email    | [string] | The email of user |
+| password    | [string] | The password of user |
+
+#### Sample Request
+
+```
+https://auth-todo-training.herokuapp.com/auth/login
+```
+
+```
+json
+{
+    "email": "some email",
+    "password": "some password"
+}
+```
+
+#### Sample Response
+
+```
+json
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNTY2MjAwNTUyfQ.oe-ZWZ4opbs6voG4YYeQRJVDfFfX_fg_iuobbdX_A_Q"
+}
+
+```
+
+## Register 
+
+#### URI
+
+```
+https://auth-todo-training.herokuapp.com/auth/register
+```
+
+#### Required Parameters
+
+| Field | Type  | Description           |
+| ----- | ----- | --------------------- |
+| email    | [string] | The email of user |
+| password    | [string] | The password of user |
+| firstName    | [string] | The first name of user |
+| lastName    | [string] | The last name of user |
+
+#### Sample Request
+
+```
+https://auth-todo-training.herokuapp.com/auth/register
+```
+
+```
+json
+{
+    "firstName":"some first name",
+    "lastName":"some first name",
+    "email": "some email",
+    "password": "some password"
+}
+```
+
+#### Sample Response
+
+```
+json
+{
+}
+
+```
+
+#Api
 
 ## Get todos
 
@@ -12,7 +103,7 @@ Retrieve all todos.
 #### URI
 
 ```
-https://todo-training.herokuapp.com/todos
+https://auth-todo-training.herokuapp.com/api/todos
 ```
 
 #### HTTP Method
@@ -26,7 +117,7 @@ GET
 #### Sample Request
 
 ```
-https://todo-training.herokuapp.com/todos
+https://auth-todo-training.herokuapp.com/api/todos
 ```
 
 #### Sample Response
@@ -63,7 +154,7 @@ Retrieve one todo.
 #### URI
 
 ```
-https://todo-training.herokuapp.com/todos/{id}
+https://auth-todo-training.herokuapp.com/api/todos/{id}
 ```
 
 #### HTTP Method
@@ -79,7 +170,7 @@ GET
 #### Sample Request
 
 ```
-https://todo-training.herokuapp.com/todos/1
+https://auth-todo-training.herokuapp.com/api/todos/1
 ```
 
 #### Sample Response
@@ -106,7 +197,7 @@ Add todo to the todo list.
 #### URI
 
 ```
-https://todo-training.herokuapp.com/todos
+https://auth-todo-training.herokuapp.com/api/todos
 ```
 
 #### HTTP Method
@@ -123,12 +214,11 @@ POST
 | Field       | Type     | Description             |
 | ----------- | -------- | ----------------------- |
 | dueDate | [date] | the due date for todo |
-| endDate | [date] | the end date for todo |
 
 #### Sample Request
 
 ```
-https://todo-training.herokuapp.com/todos
+https://auth-todo-training.herokuapp.com/api/todos
 ```
 
 ```
@@ -156,13 +246,105 @@ json
 
 ```
 
+## Complete todo 
+
+#### URI
+
+```
+https://auth-todo-training.herokuapp.com/api/todos/{id}/complete
+```
+
+#### Required Parameters
+
+| Field | Type  | Description              |
+| ----- | ----- | ------------------------ |
+| id    | [int] | The id of todo to complete |
+
+#### HTTP Method
+
+PUT
+
+#### Sample Request
+
+```
+https://auth-todo-training.herokuapp.com/api/todos/{id}/complete
+```
+
+
+#### Sample Response
+
+```
+json
+{
+    "data": {
+        "id": 2,
+        "description": "todo",
+        "completed": true,
+        "dueDate": null,
+        "updatedAt": "2019-08-13T11:53:05.551Z",
+        "createdAt": "2019-08-13T11:53:05.551Z"
+    }
+}
+
+
+```
+
+## Uncomplete todo 
+
+#### URI
+
+```
+https://auth-todo-training.herokuapp.com/api/todos/{id}/complete
+```
+
+#### Required Parameters
+
+| Field | Type  | Description              |
+| ----- | ----- | ------------------------ |
+| id    | [int] | The id of todo to uncomplete |
+
+#### HTTP Method
+
+PUT
+
+
+#### Sample Request
+
+```
+https://auth-todo-training.herokuapp.com/api/todos/{id}/complete
+```
+
+#### Sample Response
+
+```
+json
+{
+    "data": {
+        "id": 2,
+        "description": "todo",
+        "completed": true,
+        "dueDate": null,
+        "updatedAt": "2019-08-13T11:53:05.551Z",
+        "createdAt": "2019-08-13T11:53:05.551Z"
+    }
+}
+
+
+```
+
 ## Update todo
 
 #### URI
 
 ```
-https://todo-training.herokuapp.com/todos/{id}
+https://auth-todo-training.herokuapp.com/api/todos/{id}
 ```
+
+```
+https://auth-todo-training.herokuapp.com/api/todos/1/complete
+```
+
+
 
 #### HTTP Method
 
@@ -174,18 +356,16 @@ PUT
 | ----- | ----- | ------------------------ |
 | id    | [int] | The id of todo to update |
 | description | [string] | the description of todo |
-| completed | [bool] | state of todo |
 
 #### Optional Parameters
 | Field       | Type     | Description             |
 | ----------- | -------- | ----------------------- |
 | dueDate | [date] | the due date for todo |
-| endDate | [date] | the end date for todo |
 
 #### Sample Request
 
 ```
-https://todo-training.herokuapp.com/todos/1
+https://auth-todo-training.herokuapp.com/api/todos/1
 ```
 
 ```
@@ -219,7 +399,7 @@ json
 #### URI
 
 ```
-https://todo-training.herokuapp.com/todos/{id}
+https://auth-todo-training.herokuapp.com/api/todos/{id}
 ```
 
 #### HTTP Method
@@ -235,7 +415,7 @@ DELETE
 #### Sample Request
 
 ```
-https://todo-training.herokuapp.com/todos/1
+https://auth-todo-training.herokuapp.com/api/todos/1
 ```
 
 #### Sample Response
