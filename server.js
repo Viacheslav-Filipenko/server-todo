@@ -3,9 +3,9 @@ const app = express();
 const passport = require('passport');
 const bodyParser = require('body-parser');
 
-const jwtSecret = require('./config/auth/auth');
+const jwtSecret = require('./src/config/auth/auth');
 
-const userRepository = require('./repositories/user');
+const userRepository = require('./src/repositories/user');
 
 const JwtStrategy = require('passport-jwt').Strategy;
 const ExtractJwt = require('passport-jwt').ExtractJwt;
@@ -27,7 +27,7 @@ passport.use(
     }),
 );
 
-const router = require('./routes/index');
+const router = require('./src/routes/index');
 
 const port = process.env.PORT || 4000;
 

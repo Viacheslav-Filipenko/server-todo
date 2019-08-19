@@ -17,7 +17,7 @@ exports.update = async (id, userId, data) => {
     return await todo.update(data);
 };
 
-exports.delete = async id => {
+exports.delete = async (id, userId) => {
     const todo = await this.getById(id, userId);
     return await todo.destroy();
 };
