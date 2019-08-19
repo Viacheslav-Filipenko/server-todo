@@ -2,22 +2,18 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const jwtSecret = require('../config/auth/auth');
 const jwt = require('jsonwebtoken');
-const Joi = require('@hapi/joi');
 const userRepository = require('../repositories/user');
-
-const userShema = require('../validation/user');
 
 exports.login = async (req, res) => {
     try {
         const { email, password } = req.body;
 
-        const { error } = Joi.validate(
-            { email, password },
-            userShema.without('email', 'login').without('firstName', 'lastName'),
-        );
+        if (!email) {
+            throw new Error('Email is required');
+        }
 
-        if (error) {
-            throw new Error(error.details[0].message);
+        if (!password) {
+            throw new Error('Password is required');
         }
 
         const user = await userRepository.getByEmail(email);
