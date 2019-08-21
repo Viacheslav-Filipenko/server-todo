@@ -8,6 +8,7 @@ exports.login = async (req, res) => {
     try {
         const { email, password } = req.body;
 
+
         if (!email) {
             throw new Error('Email is required');
         }
@@ -40,6 +41,14 @@ exports.register = async (req, res) => {
     try {
         const { firstName, lastName, email, password } = req.body;
         const isUserExist = await userRepository.getByEmail(email);
+
+        if (!firstName) {
+            throw new Error('Email is required');
+        }
+
+        if (!lastName) {
+            throw new Error('Password is required');
+        }
 
         if (!email) {
             throw new Error('Email is required');
