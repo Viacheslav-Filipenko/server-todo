@@ -113,12 +113,15 @@ exports.getCurrentUser = async (req, res) => {
 exports.update = async (req, res) => {
     try {
         const id = req.params.id;
-        const { firstName, lastName } = req.body;
+        const { firstName, lastName, email } = req.body;
 
         const data = {};
 
         if (firstName && firstName.trim() !== '') {
             data.first_name = firstName;
+        }
+        if (email && email.trim() !== '') {
+            data.email = email;
         }
 
         if (lastName && lastName.trim() !== '') {
