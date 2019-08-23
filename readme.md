@@ -4,14 +4,24 @@
   - [Login](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#login)
   - [Register](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#register)
 - [Api](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#api)
-  - [Get todos](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#get-todos)
-  - [Get todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#get-todo)
-  - [Complete todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#complete-todo)
-  - [Uncomplete todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#uncomplete-todo)
-  - [Update todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#update-todo)
-  - [Delete todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#delete-todo)
+   
+   - [Users](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#get-todos)
+        
+        - [Get user info](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#get-todos)
+        - [Update user](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#get-todo)
+        - [Get user](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#complete-todo)
+        - [Get all users](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#uncomplete-todo)
+   
+   - [Todos](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#get-todos)
+   
+      - [Get todos](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#get-todos)
+      - [Get todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#get-todo)
+      - [Complete todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#complete-todo)
+      - [Uncomplete todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#uncomplete-todo)
+      - [Update todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#update-todo)
+      - [Delete todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#delete-todo)
 
-#Auth
+##Auth
 
 ## Login 
 
@@ -94,7 +104,7 @@ json
 
 ```
 
-#Api
+##Api
 
 ## Get todos
 
