@@ -21,7 +21,8 @@
       - [Update todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#update-todo)
       - [Delete todo](https://github.com/Viacheslav-Filipenko/server-todo/tree/auth#delete-todo)
 
-##Auth
+
+# Auth
 
 ## Login 
 
@@ -104,7 +105,9 @@ json
 
 ```
 
-##Api
+# Api
+
+## Todos
 
 ## Get todos
 
@@ -441,6 +444,96 @@ https://auth-todo-training.herokuapp.com/api/todos/55
 ```
 json
 {
+}
+
+```
+## Users 
+
+
+## Update user
+
+Update current user email, first name, last name
+
+#### URI
+
+```
+https://auth-todo-training.herokuapp.com/api/users
+```
+
+#### HTTP Method
+
+PUT
+
+#### Optional Parameters
+| Field       | Type     | Description             |
+| ----------- | -------- | ----------------------- |
+| firstName | [string] | user name |
+| lastName | [string] | user surname |
+
+
+#### Sample Request
+
+```
+https://auth-todo-training.herokuapp.com/api/users
+```
+
+```
+json
+{
+    "firstName": "lorem",
+    "lastName": "lorem",
+}
+
+```
+#### Sample Response
+
+```
+json
+{
+    "data": {
+        "id": 2,
+        "firstName": "test",
+        "lastName": "test",
+        "email": "filipenko.slavik@gmail.com",
+        "isAdmin": true
+    }
+}
+
+```
+
+
+## Get user info
+
+Get info about current user
+
+#### URI
+
+```
+https://auth-todo-training.herokuapp.com/api/users/me
+```
+
+#### HTTP Method
+
+GET
+
+#### Sample Request
+
+```
+https://auth-todo-training.herokuapp.com/api/users/me
+```
+
+#### Sample Response
+
+```
+json
+{
+    "data": {
+        "id": 2,
+        "firstName": "test",
+        "lastName": "test",
+        "email": "filipenko.slavik@gmail.com",
+        "isAdmin": true
+    }
 }
 
 ```
