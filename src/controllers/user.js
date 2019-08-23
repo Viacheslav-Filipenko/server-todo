@@ -51,7 +51,7 @@ exports.findOne = async (req, res) => {
 exports.updateCurrent = async (req, res) => {
     try {
         const id = req.user.id;
-        const { firstName, lastName } = req.body;
+        const { firstName, lastName, email} = req.body;
 
         const data = {};
 
@@ -61,6 +61,10 @@ exports.updateCurrent = async (req, res) => {
 
         if (lastName && lastName.trim() !== '') {
             data.last_name = lastName;
+        }
+
+        if (email && email.trim() !== '') {
+            data.email = email;
         }
 
         const user = await userRepository.update(id, data);
