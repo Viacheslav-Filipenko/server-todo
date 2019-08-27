@@ -34,6 +34,6 @@ const port = process.env.PORT || 4000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use('/', router);
+app.use('/api/', router);
 
 app.listen(port);
